@@ -1,0 +1,22 @@
+{
+    "name": "szwss/grade-tree",
+    "description": "grade tree model and observer for laravel 5",
+    "keywords": ["grade","tree","laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "szwss",
+            "email": "szwss@qq.com",
+            "homepage": "https://xuexishu.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Szwss\\GradeTree\\": "src/"
+        }
+    }
+
+}
