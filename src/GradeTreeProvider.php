@@ -9,7 +9,7 @@ use Illuminate\Support\ServiceProvider;
  * @package VergilLai\NodeCategories
  * @author Vergil <vergil@vip.163.com>
  */
-class NodeCategoriesProvider extends ServiceProvider
+class GradeTreeProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -19,7 +19,7 @@ class NodeCategoriesProvider extends ServiceProvider
     public function boot()
     {
         // Register commands
-        $this->commands('command.node-categories.migration');
+        $this->commands('command.grade-tree.migration');
     }
 
     /**
@@ -34,7 +34,7 @@ class NodeCategoriesProvider extends ServiceProvider
 
     private function registerCommands()
     {
-        $this->app->singleton('command.node-categories.migration', function ($app) {
+        $this->app->singleton('command.grade-tree.migration', function ($app) {
             return new MigrationCommand();
         });
     }

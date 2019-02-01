@@ -18,14 +18,14 @@ class MigrationCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'node-categories:migration {--table=categories : Tablename} {--softDelete=false}';
+    protected $signature = 'grade-tree:migration {--table=categories : Tablename} {--softDelete=false}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a categories migration';
+    protected $description = 'Create a GradeTree migration';
 
     /**
      * Create a new command instance.

@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * @package VergilLai\NodeCategories
  * @author Vergil <vergil@vip.163.com>
  */
-trait NodeCategoryTrait
+trait GradeTreeTrait
 {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
