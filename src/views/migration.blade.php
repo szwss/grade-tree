@@ -17,7 +17,7 @@ class {{$className}} extends Migration
         Schema::create('{{$table }}', function(Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('parent_id');
-            $table->unsignedTinyInteger('level');
+            $table->unsignedTinyInteger('level')->comment('//TinyInteger:0-255');
 
             /*
             * custom start
