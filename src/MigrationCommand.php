@@ -51,8 +51,7 @@ class MigrationCommand extends Command
             $this->error('table is exists!');
         } else {
             if ($this->createMigration($table, $softDelete)) {
-                $this->info('Migration created successfully.');
-                //Artisan::call('migrate');
+                $this->info('Migration created successfully.');//Artisan::call('migrate');
             } else {
                 $this->error(
                     "Couldn't create migration.\n Check the write permissions".

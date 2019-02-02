@@ -20,7 +20,7 @@ grade tree model and observer for laravel 5
 
     $ php artisan grade-tree:migration
     
-默认的数据表名是`categories`，如果需要指定数据表名，需要加上参数`--table`，例如：
+默认的数据表名是`grade_trees`，如果需要指定数据表名，需要加上参数`--table`，例如：
 
     $ php artisan grade-tree:migration --table=mytable
     
