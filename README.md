@@ -1,6 +1,6 @@
-# node-categories
+# grade-tree
 
-Node categories model and observer for laravel 5
+grade tree model and observer for laravel 5
 
 # Install
 
@@ -10,27 +10,31 @@ Node categories model and observer for laravel 5
 
 在你的项目目录`config/app.php`的`providers`数组里加入:
 
-    VergilLai\NodeCategories\NodeCategoriesProvider::class
+    Szwss\GradeTree\GradeTreeProvider::class
     
 # 使用说明
 
 ## 运行artisan
 
-创建migration并运行migrate:
+创建migration:
 
-    $ php artisan node-categories:migration
+    $ php artisan grade-tree:migration
     
 默认的数据表名是`categories`，如果需要指定数据表名，需要加上参数`--table`，例如：
 
-    $ php artisan node-categories:migration --table=mytable
+    $ php artisan grade-tree:migration --table=mytable
     
+迁移数据表:
+
+    $ php artisan migrate
+
 ## 创建模型
     
 使用artisan创建模型，例如：
 
     $ php artisan make:model Cateory
     
-然后，让你的模型use trait `NodeCategoryTrait`
+然后，让你的模型use trait `GradeTreeTrait`
     
     <?php
     
@@ -40,7 +44,7 @@ Node categories model and observer for laravel 5
     
     class Category extends Model
     {
-        use \VergilLai\NodeCategories\NodeCategoryTrait;
+        use \Szwss\GradeTree\GradeTreeTrait;
     }
 
 
@@ -48,7 +52,7 @@ Node categories model and observer for laravel 5
 
 在`/app/Providers/EventServiceProvider.php`的`boot`方法里添加：
 
-    Category::observe(\VergilLai\NodeCategories\Observer::class);
+    GradeTree::observe(\Szwss\GradeTree\Observer::class);
     
     
 # Example
