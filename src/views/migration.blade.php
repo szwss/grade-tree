@@ -20,22 +20,22 @@ class {{$className}} extends Migration
             $table->unsignedTinyInteger('level');
 
             /*
-            * 开始
+            * custom start
             * */
-            $table->string('name', 50)->unique()->comment('//显示名称');//链式调用 unique 方法来创建索引//unique()20180518改为唯一
+            $table->string('name', 50)->unique()->comment('//名称');//unique:创建唯一索引
             $table->string('title',60)->nullable()->comment('//SEO标题');//可以为空
             $table->string('keywords',80)->nullable()->comment('//SEO关键词');//可以为空
             $table->string('description',160)->nullable()->comment('//SEO描述');//可以为空
-            $table->string('thumbnail')->nullable()->comment('//缩略图');//同上
+            $table->string('thumbnail')->nullable()->comment('//缩略图');//可以为空
 
-            $table->text('content')->nullable()->comment('//内容');//可以为空,不设置可以为空，添加行时会说：没有默认值
+            $table->text('content')->nullable()->comment('//内容');//可以为空
 
             $table->Integer('view')->unsigned()->default(0)->comment('//查看次数');
-            $table->boolean('forbidden')->default(0)->comment('//禁用0为不禁用1为禁用');//默认为0，不禁用
+            $table->boolean('forbidden')->default(false)->comment('//禁用,默认不禁用');
 
-            $table->smallInteger('order')->unsigned()->default(0)->comment('//排序');//unsigned()正整数，0-65535
+            $table->smallInteger('order')->unsigned()->default(0)->comment('//排序');//unsigned()正整数,smallInteger:0-65535
             /*
-            * 结束
+            * custom end
             * */
 
             //如果表的字符集是 utf8mb4 时，一个字符将占用 4 个字节。
